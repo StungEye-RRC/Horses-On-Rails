@@ -1,7 +1,5 @@
-class HorsesController < ApplicationController
-  def index
-  end
+# frozen_string_literal: true
 
-  def show
-  end
+class HorsesController < ApplicationController
+  def show; end
 end
