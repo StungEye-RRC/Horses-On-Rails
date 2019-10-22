@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  get 'horses/index'
-  get 'horses/show'
-  get 'breeds/index'
-  get 'breeds/show'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :breeds, only: :show
+  resources :horses, only: %i[index show]
+
+  root to: 'breeds#index'
 end
