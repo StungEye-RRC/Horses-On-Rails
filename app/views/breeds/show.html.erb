@@ -3,5 +3,9 @@
 <h4>Horses of this breed</h4>
 
 <% @breed.horses.each do |horse| %>
-  <p><%= link_to horse.name, horse %></p>
+  <p>
+    <%= link_to horse.name, horse %>
+    <strong>Age:</strong>
+    <%= horse.age %>
+  </p>
 <% end %>

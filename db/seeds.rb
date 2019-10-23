@@ -10,7 +10,12 @@ NUMBER_OF_BREEDS.times do
   breed = Breed.create(name: Faker::Creature::Horse.unique.breed)
 
   HORSES_PER_BREED.times do
-    breed.horses.create(name: Faker::Creature::Horse.unique.name)
+    breed.horses.create(
+      name: Faker::Creature::Horse.unique.name,
+      age: rand(1..587).to_i,
+      number_of_legs: rand(2..222).to_i,
+      top_speed: 15 + rand * 100
+    )
   end
 end
 
