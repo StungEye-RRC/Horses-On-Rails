@@ -1,2 +1,7 @@
-<h1>Breeds#show</h1>
-<p>Find me in app/views/breeds/show.html.erb</p>
+<h3><%= @breed.name %></h3>
+
+<h4>Horses of this breed</h4>
+
+<% @breed.horses.each do |horse| %>
+  <p><%= link_to horse.name, horse %></p>
+<% end %>
