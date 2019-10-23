@@ -1,5 +1,9 @@
 <div class="horse">
-  <p><%= horse.name %></p>
+  <% if name_is_link %>
+    <p><%= link_to horse.name, horse %></p>
+  <% else %>
+    <p><%= horse.name %>
+  <% end %>
   <ul>
     <li>
       <strong>Age:</strong> <%= horse.age %>

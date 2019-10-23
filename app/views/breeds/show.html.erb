@@ -2,4 +2,6 @@
 
 <h4>Horses of this breed</h4>
 
-<%= render @breed.horses %>
+<%= render partial: 'horses/horse',
+           collection: @breed.horses,
+           locals: { name_is_link: true } %>
