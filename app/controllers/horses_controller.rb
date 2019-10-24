@@ -5,4 +5,7 @@ class HorsesController < ApplicationController
   def show
     @horse = Horse.find(params[:id])
   end
+
+  # GET /horses/search_results
+  def search_results; end
 end
