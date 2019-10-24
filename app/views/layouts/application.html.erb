@@ -15,6 +15,11 @@
     <section class="section">
       <h1 class="title"><%= link_to 'Horses on Rails', root_path %></h1>
       <h2 class="subtitle">Look at all the pretty horses standing in a <strong>row, row, row</strong>.</h2>
+      <%= form_with(url: search_results_horses_path, method: "get", local: true) do %>
+        <%= label_tag(:query, "Search for:") %>
+        <%= text_field_tag(:query) %>
+        <%= submit_tag("Search") %>
+      <% end %>
     </section>
     <section class="section">
       <%= yield %>

@@ -7,5 +7,8 @@ class HorsesController < ApplicationController
   end
 
   # GET /horses/search_results
-  def search_results; end
+  def search_results
+    @query = params[:query]
+    @horses = Horse.where(name: @query)
+  end
 end
