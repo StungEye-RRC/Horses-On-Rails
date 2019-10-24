@@ -9,6 +9,6 @@ class HorsesController < ApplicationController
   # GET /horses/search_results
   def search_results
     @query = params[:query]
-    @horses = Horse.where(name: @query)
+    @horses = Horse.where('name LIKE ?', "%#{@query}%")
   end
 end
