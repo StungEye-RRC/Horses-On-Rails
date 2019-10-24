@@ -1,7 +1,9 @@
-<h3><%= @breed.name %></h3>
+<h3 class="title is-4"><%= @breed.name %></h3>
 
-<h4>Horses of this breed</h4>
+<h4 class="subtitle is-5">Horses of this breed</h4>
 
-<%= render partial: 'horses/horse',
-           collection: @breed.horses,
-           locals: { name_is_link: true } %>
+<div class="columns is-multiline">
+  <%= render partial: 'horses/horse',
+            collection: @breed.horses,
+            locals: { name_is_link: true } %>
+</div>

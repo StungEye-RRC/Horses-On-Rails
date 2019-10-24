@@ -1,18 +1,24 @@
-<div class="horse">
-  <% if name_is_link %>
-    <p><%= link_to horse.name, horse %></p>
-  <% else %>
-    <p><%= horse.name %>
-  <% end %>
-  <ul>
-    <li>
-      <strong>Age:</strong> <%= horse.age %>
-    </li>
-    <li>
-      <strong>Number of Legs:</strong> <%= horse.number_of_legs%>
-    </li>
-    <li>
-      <strong>Top Speed:</strong> <%= horse.top_speed %>
-    </li>
-  </ul>
+<div class="column is-one-third">
+  <div class="card horse">
+    <div class="card-content">
+    <p class="title is-4">
+      <% if name_is_link %>
+        <%= link_to horse.name, horse %>
+      <% else %>
+        <%= horse.name %>
+      <% end %>
+    </p>
+    <ul>
+      <li>
+        <strong>Age:</strong> <%= horse.age %>
+      </li>
+      <li>
+        <strong>Number of Legs:</strong> <%= horse.number_of_legs%>
+      </li>
+      <li>
+        <strong>Top Speed:</strong> <%= horse.top_speed %>
+      </li>
+    </ul>
+    </div>
+  </div>
 </div>
