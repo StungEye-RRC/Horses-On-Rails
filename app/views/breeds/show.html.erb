@@ -1,5 +1,7 @@
-<h3><%= @breed.name %></h3>
+<h3 class="title is-4"><%= @breed.name %></h3>
 
-<h4>Horses of this breed</h4>
+<h4 class="title is-5">Horses of this breed</h4>
 
-<%= render @breed.horses %>
+<div class="columns is-multiline">
+  <%= render @breed.horses %>
+</div>

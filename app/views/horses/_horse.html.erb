@@ -1,1 +1,19 @@
-<p><%= link_to horse.name, horse %></p>
+<div class="column">
+  <div class="card">
+    <div class="card-content">
+      <p class="title"><%= link_to horse.name, horse %></p>
+      <p>Breed: <%= link_to horse.breed.name, horse.breed %></p>
+    </div>
+    <footer class="card-footer">
+      <p class="card-footer-item">
+        Age: <br><%= horse.age %>
+      </p>
+      <p class="card-footer-item">
+        Legs: <br><%= horse.number_of_legs %>
+      </p>
+      <p class="card-footer-item">
+        Speed: <br><%= horse.top_speed.round(2) %>
+      </p>
+    </footer>
+  </div>
+</div>
