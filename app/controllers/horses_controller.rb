@@ -5,4 +5,10 @@ class HorsesController < ApplicationController
   def show
     @horse = Horse.find(params[:id])
   end
+
+  # GET /search/?search_term=user+search+terms
+  def search
+    # DANGER DANGER DANGER DANGER DANGER!
+    @horses = Horse.where("name LIKE '%#{params[:search_term]}%'")
+  end
 end
