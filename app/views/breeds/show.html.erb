@@ -3,5 +3,7 @@
 <h4 class="title is-5">Horses of this breed</h4>
 
 <div class="columns is-multiline">
-  <%= render @breed.horses %>
+  <%= render partial: 'horses/horse',
+             collection: @breed.horses,
+             locals: { show_link: true } %>
 </div>

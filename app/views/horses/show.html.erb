@@ -1,3 +1,5 @@
 <div class="columns">
-  <%= render @horse %>
+  <%= render partial: 'horse',
+             object: @horse,
+             locals: { show_link: false } %>
 </div>

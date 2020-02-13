@@ -1,7 +1,13 @@
 <div class="column">
   <div class="card">
     <div class="card-content">
-      <p class="title"><%= link_to horse.name, horse %></p>
+      <p class="title">
+        <% if show_link %>
+          <%= link_to horse.name, horse %>
+        <% else %>
+          <%= horse.name %>
+        <% end %>
+      </p>
       <p>Breed: <%= link_to horse.breed.name, horse.breed %></p>
     </div>
     <footer class="card-footer">
