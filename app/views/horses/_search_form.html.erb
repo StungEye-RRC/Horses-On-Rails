@@ -1,4 +1,10 @@
-<%= form_with(url: search_path, local: true, method: "get") do %>
-  <%= text_field_tag(:search_term) %>
-  <%= submit_tag("Search") %>
+<%= form_with(url: search_path, local: true, method: "get", class: 'search-form') do %>
+  <div class="field has-addons">
+    <div class="control">
+      <%= text_field_tag(:search_term, nil, class: 'input', placeholder: 'Search Horses By Name') %>
+    </div>
+    <div class="control">
+      <%= submit_tag("Search", class: "button is-info") %>
+    </div>
+  </div>
 <% end %>

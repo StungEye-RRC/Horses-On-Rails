@@ -3,7 +3,7 @@
   for the search term "<%= params[:search_term] %>".
 </p>
 
-<div class="columns is-multiline">
+<div class="search-results columns is-multiline">
   <%= render partial: 'horses/horse',
              collection: @horses,
              locals: { show_link: true } %>
