@@ -21,4 +21,7 @@ end
 
 puts "Created #{Breed.count} Breeds."
 puts "Created #{Horse.count} Horses."
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+
+if Rails.env.development?
+  AdminUser.create!(email: "admin@example.com", password: "password", password_confirmation: "password")
+end
