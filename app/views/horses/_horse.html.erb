@@ -1,5 +1,12 @@
 <div class="column">
   <div class="card">
+    <% if horse.image.present? %>
+      <div class="card-image">
+        <figure class="image">
+          <%= image_tag horse.image %>
+        </figure>
+      </div>
+    <% end %>
     <div class="card-content">
       <p class="title">
         <% if show_link %>
